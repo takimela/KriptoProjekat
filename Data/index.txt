@@ -1,0 +1,5 @@
+V	250417192705Z		05	unknown	/C=US/ST=California/O=Example Company/OU=IT/CN=Djoki/emailAddress=djokiinfo@example.com
+V	250417194604Z		06	unknown	/C=US/ST=California/O=Example Company/OU=IT/CN=example.com/emailAddress=info@example.com
+V	250418081631Z		07	unknown	/C=BA/ST=RS/O=Elektrotehnicki fakultet/OU=ETF/CN=Gvozden/emailAddress=gvozden
+V	250418082231Z		08	unknown	/C=BA/ST=RS/O=Elektrotehnicki fakultet/OU=ETF/CN=ratkol/emailAddress=rala
+V	250418082946Z		09	unknown	/C=BA/ST=RS/O=Elektrotehnicki fakultet/OU=ETF/CN=novi/emailAddress=novi

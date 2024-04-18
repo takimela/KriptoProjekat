@@ -34,7 +34,7 @@
                         <Font name="Arial Bold" size="18.0" />
                     </font>
                 </Label>
-                <Button fx:id="buttonFirstLogIn" layoutX="173.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleButtonLogIn" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: fff;" text="Log in" />
+                <Button fx:id="buttonFirstLogIn" layoutX="173.0" layoutY="408.0" mnemonicParsing="false" onAction="#goToLoginView" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: fff;" text="Log in" />
                 <Label layoutX="99.0" layoutY="29.0" prefHeight="59.0" prefWidth="256.0" text="EncryptorX" textFill="WHITE">
                     <font>
                         <Font name="Rockwell" size="48.0" />
@@ -51,7 +51,7 @@
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="buttonRegisterView" layoutX="179.0" layoutY="513.0" mnemonicParsing="false" onAction="#goToNextScene" prefHeight="9.0" prefWidth="107.0" text="Register" />
+            <Button fx:id="buttonRegisterView" layoutX="179.0" layoutY="513.0" mnemonicParsing="false" onAction="#goToRegistrationView" prefHeight="9.0" prefWidth="107.0" text="Register" />
             </children>
         </AnchorPane>
     </center>

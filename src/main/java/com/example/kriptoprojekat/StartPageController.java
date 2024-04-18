@@ -14,7 +14,13 @@ public class StartPageController {
     protected void handleButtonLogIn() { labelWrongCertificate.setText("Nema nicega"); }
 
     @FXML
-    public void goToNextScene(ActionEvent event) throws IOException {
+    public void goToRegistrationView(ActionEvent event) throws IOException {
+        Main m = new Main();
+        m.changeScene("registration-view.fxml");
+    }
+
+    @FXML
+    public void goToLoginView(ActionEvent event) throws IOException {
         Main m = new Main();
         m.changeScene("login-view.fxml");
     }
