@@ -3,6 +3,7 @@ package com.example.kriptoprojekat;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,6 +23,8 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("EncryptorX");
         stage.setScene(scene);
+        Image icon = new Image("401535_anonymous_icon.png");
+        stage.getIcons().add(icon);
         stage.show();
     }
 
