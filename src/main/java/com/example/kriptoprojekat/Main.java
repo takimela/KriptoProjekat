@@ -9,6 +9,10 @@ import java.io.IOException;
 
 public class Main extends Application {
 
+    public static String currentUser = "";
+    public static String loggedInUser = "";
+    public static String loggedInPassword = "";
+
     private static Stage primaryStage;
     @Override
     public void start(Stage stage) throws IOException {

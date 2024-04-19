@@ -2,10 +2,13 @@ package com.example.kriptoprojekat;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+
+import static com.example.kriptoprojekat.Main.currentUser;
 
 public class RegistrationController {
 
@@ -55,10 +58,39 @@ public class RegistrationController {
         String unit = textFieldUnit.getText();
         String info = "\"/C=" + country + "/ST=" + province + "/L=" + town + "/O=" + organization + "/OU=" + unit + "/CN=" + username + "/emailAddress=" + email + "\"";
 
-        OpenSSL.genRsa(username,password);
-        OpenSSL.newRequest(username,password,info);
-        OpenSSL.signRequest(username);
+        if(FileManager.isUserExists(username))
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("User already exists");
+            alert.setHeaderText("User with this username already exists");
+            alert.setContentText("User with this username already exists, please chose another one");
+            alert.showAndWait();
+        } else
+        {
+            OpenSSL.genRsa(username,password);
+            OpenSSL.newRequest(username,password,info);
+            OpenSSL.signRequest(username);
+            OpenSSL.createUser(username,password);
 
+            String currDir = System.getProperty("user.dir");
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Registration");
+            alert.setHeaderText("Registration successful");
+            alert.setContentText("Path to certificate file: " + currDir + "\\Data\\certs\\" + username + ".crt\n" +
+                    "Path to key file: " + currDir + "\\Data\\private\\" + username + ".key");
+            alert.showAndWait();
+
+            Main m = new Main();
+            m.changeScene("start-view.fxml");
+        }
+
+    }
+
+    @FXML
+    protected void handleButtonBack() throws IOException {
+        Main m = new Main();
+        m.changeScene("start-view.fxml");
     }
 
 }

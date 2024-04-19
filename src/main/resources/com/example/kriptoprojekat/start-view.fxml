@@ -29,29 +29,24 @@
                         <Image url="@../../../img/401535_anonymous_icon.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="16.0" layoutY="331.0" text="To log in please enter the path to your certificate:" textFill="WHITE">
+                <Label layoutX="9.0" layoutY="332.0" text="To log in please enter the name of your certificate:" textFill="WHITE">
                     <font>
                         <Font name="Arial Bold" size="18.0" />
                     </font>
                 </Label>
-                <Button fx:id="buttonFirstLogIn" layoutX="173.0" layoutY="408.0" mnemonicParsing="false" onAction="#goToLoginView" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: fff;" text="Log in" />
                 <Label layoutX="99.0" layoutY="29.0" prefHeight="59.0" prefWidth="256.0" text="EncryptorX" textFill="WHITE">
                     <font>
                         <Font name="Rockwell" size="48.0" />
                     </font>
                 </Label>
-            <Label fx:id="labelWrongCertificate" layoutX="167.0" layoutY="300.0" prefHeight="27.0" prefWidth="131.0" textFill="RED">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="textFieldCertificate" layoutX="31.0" layoutY="362.0" prefHeight="35.0" prefWidth="392.0" promptText="path to certificate" />
+            <TextField fx:id="textFieldCertificate" layoutX="31.0" layoutY="362.0" prefHeight="35.0" prefWidth="392.0" promptText="name of certificate with extension" />
+                <Button fx:id="buttonFirstLogIn" layoutX="173.0" layoutY="408.0" mnemonicParsing="false" onAction="#goToLoginView" prefHeight="34.0" prefWidth="108.0" style="-fx-background-color: fff;" text="Log in" />
             <Label layoutX="153.0" layoutY="483.0" text="Create a new account:" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="buttonRegisterView" layoutX="179.0" layoutY="513.0" mnemonicParsing="false" onAction="#goToRegistrationView" prefHeight="9.0" prefWidth="107.0" text="Register" />
+            <Button fx:id="buttonRegisterView" layoutX="173.0" layoutY="513.0" mnemonicParsing="false" onAction="#goToRegistrationView" prefHeight="9.0" prefWidth="107.0" text="Register" />
             </children>
         </AnchorPane>
     </center>
